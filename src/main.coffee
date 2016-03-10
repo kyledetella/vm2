@@ -1,6 +1,6 @@
 version = process.versions.node.split '.'
-if parseInt(version[0]) is 0 and parseInt(version[1]) < 11
-	throw new Error "vm2 requires Node.js version 0.11+ or io.js 1.0+ (current version: #{process.versions.node})"
+if parseInt(version[0]) is 0 and parseInt(version[1]) < 10
+	throw new Error "vm2 requires Node.js version 0.10+ (current version: #{process.versions.node})"
 
 fs = require 'fs'
 vm = require 'vm'
