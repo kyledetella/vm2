@@ -21,16 +21,16 @@
 	},
 	"license": "MIT",
 	"dependencies": {
-
+		"coffee-script": "^1.8.0"
 	},
 	"devDependencies": {
-		"coffee-script": "^1.8.0",
 		"mocha": "^1.12.0"
 	},
 	"engines": {
 		"node": ">=0.10"
 	},
 	"scripts": {
+    "postinstall": "./node_modules/coffee-script/bin/coffee --compile --bare --output ./lib ./src",
 		"test": "mocha"
 	},
 	"bin": {
